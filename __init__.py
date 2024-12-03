@@ -3,13 +3,24 @@ from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
+# Fonction pour charger ou générer une clé persistante
+def load_or_generate_key():
+    try:
+        with open("secret.key", "rb") as key_file:
+            return key_file.read()
+    except FileNotFoundError:
+        key = Fernet.generate_key()
+        with open("secret.key", "wb") as key_file:
+            key_file.write(key)
+        return key
+
+# Charger la clé persistante
+key = load_or_generate_key()
+f = Fernet(key)
+
 @app.route('/')
 def hello_world():
     return render_template('hello.html')
-
-# Génération de la clé pour Fernet
-key = Fernet.generate_key()
-f = Fernet(key)
 
 # Route pour l'encryptage
 @app.route('/encrypt/<string:valeur>')
