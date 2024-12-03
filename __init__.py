@@ -2,8 +2,6 @@ from cryptography.fernet import Fernet
 from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
-
-# Clé de chiffrement/déchiffrement
 key = Fernet.generate_key()
 f = Fernet(key)
 
@@ -11,14 +9,12 @@ f = Fernet(key)
 def hello_world():
     return render_template('hello.html')
 
-# Route pour chiffrer une valeur
 @app.route('/encrypt/<string:valeur>')
 def encryptage(valeur):
     valeur_bytes = valeur.encode()  # Conversion str -> bytes
     token = f.encrypt(valeur_bytes)  # Chiffrement de la valeur
     return f"Valeur encryptée : {token.decode()}"  # Retourne le token en str
 
-# Nouvelle route pour déchiffrer une valeur via URL
 @app.route('/decrypt/<string:encrypted_val>')
 def decryptage(encrypted_val):
     try:
