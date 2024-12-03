@@ -3,8 +3,22 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-# Générer une clé et créer une instance de Fernet
-key = Fernet.generate_key()
+# Générer une clé et la sauvegarder dans un fichier
+def load_key():
+    return open("key.key", "rb").read()
+
+def write_key():
+    key = Fernet.generate_key()
+    with open("key.key", "wb") as key_file:
+        key_file.write(key)
+    return key
+
+# Charger la clé ou en générer une nouvelle si elle n'existe pas
+try:
+    key = load_key()
+except FileNotFoundError:
+    key = write_key()
+
 f = Fernet(key)
 
 @app.route('/')
