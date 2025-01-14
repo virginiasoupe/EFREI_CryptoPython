@@ -11,7 +11,7 @@ def hello_world():
 def base_svg():
     return render_template('base_svg.html')
 
-@app.route('/base_svg')
+@app.route('/maison')
 def maison():
     return render_template('maison.html')
 
