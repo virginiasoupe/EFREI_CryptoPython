@@ -1,0 +1,29 @@
+from xml.etree import ElementTree as ET
+
+# Charger le fichier SVG
+svg_file_path = '/chemin/vers/le/fichier/svg-cards.svg'
+
+# Parser le fichier SVG
+tree = ET.parse(svg_file_path)
+root = tree.getroot()
+
+# Définir l'espace de noms pour les éléments SVG
+namespace = {'svg': 'http://www.w3.org/2000/svg'}
+ET.register_namespace('', namespace['svg'])
+
+# Trouver les éléments liés au Valet de Trèfle
+full_card_elements = []
+for elem in root.findall(".//svg:g", namespace):
+    id_value = elem.get('id') or ''
+    if 'jack_club' in id_value or ('club' in id_value and 'jack' in id_value):
+        full_card_elements.append(elem)
+
+# Créer un nouveau fichier SVG avec les éléments identifiés
+if full_card_elements:
+    new_svg_card = ET.Element('svg', attrib=root.attrib)
+    for elem in full_card_elements:
+        new_svg_card.append(elem)
+
+    # Sauvegarder le fichier résultant
+    new_card_path = '/chemin/vers/le/fichier/valet_de_trefle_retry.svg'
+    ET.ElementTree(new_svg_card).write(new_card_path, encoding='unicode', xml_declaration=True)
