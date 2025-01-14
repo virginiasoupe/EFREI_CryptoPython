@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison en SVG</title>
+</head>
+<body>
+    <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+        <!-- Fond vert (pelouse) -->
+        <rect x="0" y="400" width="800" height="200" fill="lightgreen" />
+
+        <!-- Maison -->
+        <rect x="300" y="250" width="200" height="150" fill="yellow" stroke="black" />
+        <!-- Toit -->
+        <polygon points="300,250 400,150 500,250" fill="red" stroke="black" />
+        <!-- Porte -->
+        <rect x="370" y="320" width="60" height="80" fill="brown" stroke="black" />
+        <!-- Fenêtre gauche -->
+        <rect x="320" y="270" width="40" height="40" fill="lightblue" stroke="black" />
+        <!-- Fenêtre droite -->
+        <rect x="440" y="270" width="40" height="40" fill="lightblue" stroke="black" />
+
+        <!-- Soleil -->
+        <circle cx="100" cy="100" r="50" fill="yellow" />
+        <!-- Rayons du soleil -->
+        <line x1="100" y1="30" x2="100" y2="0" stroke="orange" stroke-width="4" />
+        <line x1="100" y1="170" x2="100" y2="200" stroke="orange" stroke-width="4" />
+        <line x1="30" y1="100" x2="0" y2="100" stroke="orange" stroke-width="4" />
+        <line x1="170" y1="100" x2="200" y2="100" stroke="orange" stroke-width="4" />
+        <line x1="50" y1="50" x2="20" y2="20" stroke="orange" stroke-width="4" />
+        <line x1="150" y1="50" x2="180" y2="20" stroke="orange" stroke-width="4" />
+        <line x1="50" y1="150" x2="20" y2="180" stroke="orange" stroke-width="4" />
+        <line x1="150" y1="150" x2="180" y2="180" stroke="orange" stroke-width="4" />
+
+        <!-- Nuages -->
+        <ellipse cx="600" cy="100" rx="50" ry="30" fill="white" />
+        <ellipse cx="650" cy="110" rx="50" ry="30" fill="white" />
+        <ellipse cx="620" cy="130" rx="50" ry="30" fill="white" />
+
+        <!-- Fleur -->
+        <circle cx="550" cy="380" r="10" fill="red" />
+        <circle cx="540" cy="370" r="10" fill="yellow" />
+        <circle cx="560" cy="370" r="10" fill="yellow" />
+        <circle cx="540" cy="390" r="10" fill="yellow" />
+        <circle cx="560" cy="390" r="10" fill="yellow" />
+        <line x1="550" y1="380" x2="550" y2="420" stroke="green" stroke-width="2" />
+
+        <!-- Cheminée -->
+        <rect x="450" y="170" width="20" height="50" fill="brown" stroke="black" />
+    </svg>
+</body>
+</html>
