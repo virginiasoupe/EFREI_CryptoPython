@@ -11,6 +11,10 @@ def hello_world():
 def base_svg():
     return render_template('base_svg.html')
 
+@app.route('/base_svg')
+def maison():
+    return render_template('maison.html')
+
 # Route pour chiffrer une valeur avec une clé privée manuelle
 @app.route('/encrypt/<string:key>/<string:valeur>')
 def encryptage(key, valeur):
