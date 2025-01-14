@@ -3,57 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dessin SVG - Maison</title>
+    <title>Maison SVG</title>
 </head>
 <body>
     <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg" style="background-color: lightblue;">
         <!-- Pelouse -->
         <rect x="0" y="400" width="800" height="200" fill="lightgreen" />
 
-        <!-- Maison (corps) -->
-        <rect x="300" y="250" width="200" height="150" fill="gold" stroke="black" stroke-width="2" />
+        <!-- Maison -->
+        <rect x="300" y="250" width="200" height="150" fill="yellow" stroke="black" stroke-width="2" />
 
         <!-- Toit -->
         <polygon points="300,250 400,150 500,250" fill="red" stroke="black" stroke-width="2" />
 
-        <!-- Fenêtre inclinée -->
-        <polygon points="330,280 370,280 360,310 320,310" fill="lightblue" stroke="black" stroke-width="2" />
-
         <!-- Porte -->
-        <rect x="370" y="320" width="50" height="80" fill="saddlebrown" stroke="black" stroke-width="2" />
-        <!-- Poignée -->
-        <circle cx="410" cy="360" r="3" fill="black" />
+        <rect x="370" y="320" width="60" height="80" fill="saddlebrown" stroke="black" stroke-width="2" />
+        <!-- Poignée de la porte -->
+        <circle cx="420" cy="360" r="5" fill="black" />
+
+        <!-- Fenêtre gauche -->
+        <rect x="320" y="270" width="50" height="50" fill="lightblue" stroke="black" stroke-width="2" />
+        <line x1="320" y1="295" x2="370" y2="295" stroke="black" stroke-width="2" />
+        <line x1="345" y1="270" x2="345" y2="320" stroke="black" stroke-width="2" />
 
         <!-- Fenêtre circulaire sur le toit -->
-        <circle cx="400" cy="210" r="15" fill="lightblue" stroke="black" stroke-width="2" />
-
-        <!-- Cheminée -->
-        <rect x="450" y="170" width="20" height="50" fill="brown" stroke="black" />
-        <!-- Fumée -->
-        <ellipse cx="460" cy="120" rx="15" ry="8" fill="gray" opacity="0.5" />
-        <ellipse cx="470" cy="100" rx="20" ry="10" fill="gray" opacity="0.4" />
-        <ellipse cx="450" cy="80" rx="10" ry="6" fill="gray" opacity="0.3" />
+        <circle cx="400" cy="210" r="20" fill="lightblue" stroke="black" stroke-width="2" />
 
         <!-- Soleil -->
-        <circle cx="600" cy="100" r="40" fill="yellow" />
-        <!-- Rayons du soleil -->
-        <line x1="600" y1="20" x2="600" y2="60" stroke="orange" stroke-width="3" />
-        <line x1="600" y1="140" x2="600" y2="180" stroke="orange" stroke-width="3" />
-        <line x1="540" y1="100" x2="580" y2="100" stroke="orange" stroke-width="3" />
-        <line x1="620" y1="100" x2="660" y2="100" stroke="orange" stroke-width="3" />
-        <line x1="570" y1="70" x2="590" y2="50" stroke="orange" stroke-width="3" />
-        <line x1="610" y1="50" x2="630" y2="70" stroke="orange" stroke-width="3" />
-        <line x1="570" y1="130" x2="590" y2="150" stroke="orange" stroke-width="3" />
-        <line x1="610" y1="150" x2="630" y2="130" stroke="orange" stroke-width="3" />
+        <circle cx="100" cy="100" r="40" fill="yellow" />
+        <line x1="100" y1="20" x2="100" y2="60" stroke="orange" stroke-width="4" />
+        <line x1="100" y1="140" x2="100" y2="180" stroke="orange" stroke-width="4" />
+        <line x1="20" y1="100" x2="60" y2="100" stroke="orange" stroke-width="4" />
+        <line x1="140" y1="100" x2="180" y2="100" stroke="orange" stroke-width="4" />
+        <line x1="60" y1="60" x2="80" y2="80" stroke="orange" stroke-width="4" />
+        <line x1="120" y1="60" x2="140" y2="80" stroke="orange" stroke-width="4" />
+        <line x1="60" y1="140" x2="80" y2="120" stroke="orange" stroke-width="4" />
+        <line x1="120" y1="140" x2="140" y2="120" stroke="orange" stroke-width="4" />
 
         <!-- Nuages -->
-        <ellipse cx="150" cy="100" rx="50" ry="30" fill="white" />
-        <ellipse cx="200" cy="110" rx="50" ry="30" fill="white" />
-        <ellipse cx="180" cy="80" rx="50" ry="30" fill="white" />
-
-        <ellipse cx="650" cy="200" rx="60" ry="35" fill="white" />
-        <ellipse cx="700" cy="220" rx="50" ry="30" fill="white" />
-        <ellipse cx="630" cy="190" rx="40" ry="25" fill="white" />
+        <ellipse cx="600" cy="100" rx="50" ry="30" fill="white" />
+        <ellipse cx="650" cy="110" rx="50" ry="30" fill="white" />
+        <ellipse cx="620" cy="130" rx="50" ry="30" fill="white" />
 
         <!-- Fleurs -->
         <circle cx="340" cy="400" r="10" fill="red" />
@@ -62,14 +52,10 @@
         <circle cx="330" cy="410" r="10" fill="yellow" />
         <circle cx="350" cy="410" r="10" fill="yellow" />
         <line x1="340" y1="400" x2="340" y2="430" stroke="green" stroke-width="3" />
-
-        <!-- Arbres/Buissons -->
-        <circle cx="250" cy="400" r="30" fill="green" />
-        <circle cx="280" cy="420" r="25" fill="green" />
-        <circle cx="220" cy="420" r="25" fill="green" />
     </svg>
 </body>
 </html>
+
 
         <rect x="450" y="170" width="20" height="50" fill="brown" stroke="black" />
     </svg>
