@@ -7,10 +7,14 @@ function affichage(){
 
 function cacherImage(){
 	document.getElementById('imageChat').style.display = "none";
+	document.getElementById('imageChat2').style.display = "none";
+	document.getElementById('imageChat3').style.display = "none";
 }
 
 function presenterImage(){
 	document.getElementById('imageChat').style.display = "block";
+	document.getElementById('imageChat2').style.display = "block";
+	document.getElementById('imageChat3').style.display = "block";
 }
 
 function controler(){
@@ -28,12 +32,16 @@ function controler(){
 <h2>Boîte de dialogue</h2>
 <button onclick="affichage()">Afficher</button>
 <hr/>
-<h2>Image de chat</h2>
-<!-- Image ajoutée avec une URL correcte -->
+<h2>Images de chats</h2>
+<!-- Image 1 -->
 <img id="imageChat" src="{{ url_for('static', filename='static/images/mognon.jpg') }}" alt="Mognon le chat" style="display:none; width:200px;">
+<!-- Image 2 -->
+<img id="imageChat2" src="{{ url_for('static', filename='static/images/mognon-2.jpg') }}" alt="Deuxième chat" style="display:none; width:200px;">
+<!-- Image 3 -->
+<img id="imageChat3" src="{{ url_for('static', filename='static/images/mognon-3.jpg') }}" alt="Troisième chat" style="display:none; width:200px;">
 <br/>
-<button onclick="presenterImage()">Afficher l'image</button>
-<button onclick="cacherImage()">Cacher l'image</button>
+<button onclick="presenterImage()">Afficher les images</button>
+<button onclick="cacherImage()">Cacher les images</button>
 <hr/>
 <p>Option<input type="checkbox" id="Control"></p>
 <button onclick="controler()">Check</button>
