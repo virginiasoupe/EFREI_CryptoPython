@@ -1,41 +1,33 @@
 <html>
 <head>
 <script>
-function affichage(){
-	alert("Tout est OK !");
-}
 
-function cacherImage(){
-	document.getElementById('imageChat').style.display = "none";
-}
+function image1(){
+    if(document.getElementById('1').checked){
+    document.getElementById('coul').style.display="Block";
+    }
+    else document.getElementById('coul').style.display="None";
+} 
 
-function presenterImage(){
-	document.getElementById('imageChat').style.display = "block";
-}
-
-function controler(){
-	if(document.getElementById('Control').checked){
-		alert("Bouton option coché");
-	} else {
-		alert("Bouton option NON coché");
-	}		
-}
 </script>
 </head>
 <body>
-<h1>Mes outils</h1>
+<h1>Mes outils pour images</h1>
 <hr/>
-<h2>Boîte de dialogue</h2>
-<button onclick="affichage()">Afficher</button>
+
+<h2>Image 1</h2>
+<img src="{{ url_for('static', filename='images/mognon.jpg') }}" alt="Logo">
+<p>Image 1<input onclick="image1()" type="checkbox" id="image1"></p>
 <hr/>
-<h2>Image de chat</h2>
-<!-- Image ajoutée avec une URL correcte -->
-<img id="imageChat" src="{{ url_for('static', filename='static/images/mognon.jpg') }}" alt="Mognon le chat" style="display:none; width:200px;">
-<br/>
-<button onclick="presenterImage()">Afficher l'image</button>
-<button onclick="cacherImage()">Cacher l'image</button>
+
+<h2>Image 2</h2>
+<img id=coul src="{{ url_for('static', filename='images/mognon-2.jpg') }}" alt="Logo">
+<p>Image 2<input onclick="image2()" type="checkbox" id="2"></p>
 <hr/>
-<p>Option<input type="checkbox" id="Control"></p>
-<button onclick="controler()">Check</button>
+
+<h2>Image 3</h2>
+<img src="{{ url_for('static', filename='images/mognon-3.jpg') }}" alt="Logo">
+<p>Image 1<input onclick="image1()" type="checkbox" id="1"></p>
+
 </body>
 </html>
