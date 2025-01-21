@@ -1,61 +1,65 @@
 <html>
   <head>
     <script>
-      function lancer(){
-        var Val = Math.floor((Math.random() * 2)+1);
-        document.getElementById('C4').style.display = 'none';
-		document.getElementById('C1').style.display = 'none';
-		document.getElementById('C7').style.display = 'none';
-		
-		switch(Val){
-        case 1 :
-                    document.getElementById('C4').style.display = 'block';
-                    break;
+      function lancer() {
+        // Générer un nombre aléatoire entre 1 et 6
+        var val = Math.floor(Math.random() * 6) + 1;
 
-        case 2 :
-                    document.getElementById('C1').style.display = 'block';
-                    document.getElementById('C7').style.display = 'block';
-                    break;
+        // Masquer tous les cercles
+        for (let i = 1; i <= 7; i++) {
+          document.getElementById("C" + i).style.display = "none";
         }
-        
+
+        // Afficher les cercles en fonction de la valeur tirée
+        switch (val) {
+          case 1: // Face 1 : Cercle central
+            document.getElementById("C4").style.display = "block";
+            break;
+          case 2: // Face 2 : Haut-gauche et bas-droite
+            document.getElementById("C1").style.display = "block";
+            document.getElementById("C7").style.display = "block";
+            break;
+          case 3: // Face 3 : Haut-gauche, centre, bas-droit
+            document.getElementById("C1").style.display = "block";
+            document.getElementById("C4").style.display = "block";
+            document.getElementById("C7").style.display = "block";
+            break;
+          case 4: // Face 4 : Quatre coins
+            document.getElementById("C1").style.display = "block";
+            document.getElementById("C3").style.display = "block";
+            document.getElementById("C5").style.display = "block";
+            document.getElementById("C7").style.display = "block";
+            break;
+          case 5: // Face 5 : Quatre coins + centre
+            document.getElementById("C1").style.display = "block";
+            document.getElementById("C3").style.display = "block";
+            document.getElementById("C4").style.display = "block";
+            document.getElementById("C5").style.display = "block";
+            document.getElementById("C7").style.display = "block";
+            break;
+          case 6: // Face 6 : Deux colonnes
+            document.getElementById("C1").style.display = "block";
+            document.getElementById("C3").style.display = "block";
+            document.getElementById("C5").style.display = "block";
+            document.getElementById("C2").style.display = "block";
+            document.getElementById("C6").style.display = "block";
+            document.getElementById("C7").style.display = "block";
+            break;
+        }
       }
-    </script>  
+    </script>
   </head>
   <body>
-   <button onclick="lancer()">Lancer</button>
-     <svg width="300px" height="300px" style="background-color:lightgray">
-    
-   <circle id="C1" cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" style="display:none"/>
-   <circle id="C4" cx="150" cy="150" r="40" stroke="black" stroke-width="3" fill="red" style="display:none"/>
-  <circle id="C7" cx="250" cy="250" r="40" stroke="black" stroke-width="3" fill="red" style="display:none"/>
-
-  </svg> 
-</body>
+    <button onclick="lancer()">Lancer</button>
+    <svg width="300px" height="300px" style="background-color:lightgray">
+      <!-- Les cercles du dé -->
+      <circle id="C1" cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" style="display:none" />
+      <circle id="C2" cx="50" cy="150" r="40" stroke="black" stroke-width="3" fill="red" style="display:none" />
+      <circle id="C3" cx="50" cy="250" r="40" stroke="black" stroke-width="3" fill="red" style="display:none" />
+      <circle id="C4" cx="150" cy="150" r="40" stroke="black" stroke-width="3" fill="red" style="display:none" />
+      <circle id="C5" cx="250" cy="50" r="40" stroke="black" stroke-width="3" fill="red" style="display:none" />
+      <circle id="C6" cx="250" cy="150" r="40" stroke="black" stroke-width="3" fill="red" style="display:none" />
+      <circle id="C7" cx="250" cy="250" r="40" stroke="black" stroke-width="3" fill="red" style="display:none" />
+    </svg>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
