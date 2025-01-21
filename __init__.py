@@ -26,6 +26,10 @@ def chenille():
 @app.route('/d6f')
 def d6f():
     return render_template('d6f.html')
+
+@app.route('/bibima')
+def bibima():
+    return render_template('bibima.html')
     
 # Route pour chiffrer une valeur avec une clé privée manuelle
 @app.route('/encrypt/<string:key>/<string:valeur>')
