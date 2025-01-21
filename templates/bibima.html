@@ -20,7 +20,6 @@ function controler(){
 		alert("Bouton option NON coché");
 	}		
 }
-
 </script>
 </head>
 <body>
@@ -30,8 +29,8 @@ function controler(){
 <button onclick="affichage()">Afficher</button>
 <hr/>
 <h2>Image de chat</h2>
-<!-- Image ajoutée -->
-<img id="mognon.jpg" src="<img src="{{ url_for('static', filename='images/mognon.jpg') }}" alt="Logo">" alt="Un joli chat" style="display:none; width:200px;">
+<!-- Image ajoutée avec une URL correcte -->
+<img id="imageChat" src="{{ url_for('static', filename='images/mognon.jpg') }}" alt="Mognon le chat" style="display:none; width:200px;">
 <br/>
 <button onclick="presenterImage()">Afficher l'image</button>
 <button onclick="cacherImage()">Cacher l'image</button>
