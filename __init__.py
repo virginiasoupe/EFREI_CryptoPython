@@ -27,7 +27,7 @@ def chenille():
 def d6f():
     return render_template('d6f.html')
 
-@app.route('/bibima')
+@app.route('/bibliotheque_images')
 def bibima():
     return render_template('bibima.html')
     
