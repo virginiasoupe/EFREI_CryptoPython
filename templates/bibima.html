@@ -2,20 +2,23 @@
 <head>
 <script>
 function affichage(){
-	alert("Tout es OK !");
+	alert("Tout est OK !");
 }
-function cacher(){
-	document.getElementById('DuTexte').style.display="None";
+
+function cacherImage(){
+	document.getElementById('imageChat').style.display = "none";
 }
-function presenter(){
-	document.getElementById('DuTexte').style.display="Block";
+
+function presenterImage(){
+	document.getElementById('imageChat').style.display = "block";
 }
 
 function controler(){
 	if(document.getElementById('Control').checked){
-			alert("Bouton option coché");
-		}
-	else{alert("Bouton option NON coché");}		
+		alert("Bouton option coché");
+	} else {
+		alert("Bouton option NON coché");
+	}		
 }
 
 </script>
@@ -23,16 +26,17 @@ function controler(){
 <body>
 <h1>Mes outils</h1>
 <hr/>
-<h2>Boite de dialogue</h2>
+<h2>Boîte de dialogue</h2>
 <button onclick="affichage()">Afficher</button>
 <hr/>
-<p id="DuTexte">Ma phrase de texte</p>
-<button onclick="presenter()">Presenter</button>
-<button onclick="cacher()">Cacher</button>
+<h2>Image de chat</h2>
+<!-- Image ajoutée -->
+<img id="Image-Mognon-1" src="https://github.com/virginiasoupe/EFREI_CryptoPython/static/images/mognon-jpg" alt="Un joli chat" style="display:none; width:200px;">
+<br/>
+<button onclick="presenterImage()">Afficher l'image</button>
+<button onclick="cacherImage()">Cacher l'image</button>
 <hr/>
 <p>Option<input type="checkbox" id="Control"></p>
 <button onclick="controler()">Check</button>
-
-
 </body>
 </html>
